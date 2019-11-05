@@ -25,9 +25,9 @@ export class BookCreateComponent implements OnInit {
   }
   addNewBook() {
     this.bookService.createNewBook(this.data.value).subscribe(next => {
-      this.message = 'Tao moi thanh cong';
+      this.message = 'ok';
     }, error => {
-      this.message = 'Tao moi that bat';
+      this.message = 'error';
     });
   }
 

@@ -27,15 +27,15 @@ export class BookDeleteComponent implements OnInit {
     this.bookService.getBookById(id).subscribe(next => {
       this.book = next;
     }, error => {
-      alert('Thao tac khong thanh cong');
+      alert('error');
     });
   }
 
   deleteBook(id: number) {
     this.bookService.deleteBook(id).subscribe(next => {
-      this.message = 'Xoa thanh cong';
+      this.message = 'ok';
     }, error => {
-      this.message = 'Xoa khong thanh cong';
+      this.message = 'delete error';
     });
 
   }

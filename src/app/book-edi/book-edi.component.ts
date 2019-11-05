@@ -42,9 +42,9 @@ export class BookEdiComponent implements OnInit {
   }
   editBook() {
     this.bookService.updateBook(this.data.value).subscribe(next => {
-      this.message = 'Sua thanh cong';
+      this.message = 'edit ok';
     }, error => {
-      this.message = 'Sua that bai';
+      this.message = 'edit error';
     });
   }
 
