@@ -1,0 +1,29 @@
+<h3>Edit Book</h3>
+<i>{{message}}</i>
+<form novalidate (ngSubmit)="editBook()" [formGroup]="data">
+  <table>
+    <tr><td><input type="hidden" formControlName="id"></td></tr>
+    <tr>
+      <td>Ten</td>
+      <td>
+        <input type="text" formControlName="title">
+      </td>
+    </tr>
+    <tr>
+      <td>Author</td>
+      <td>
+        <input type="text" formControlName="author">
+      </td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>
+        <input type="text" formControlName="description">
+      </td>
+    </tr>
+    <tr>
+      <td><input type="submit" value="Edit"></td>
+      <td><button [routerLink]="['/book']">Back To List</button></td>
+    </tr>
+  </table>
+</form>
